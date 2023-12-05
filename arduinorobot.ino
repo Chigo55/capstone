@@ -248,31 +248,26 @@ void loop()
 
     if (cmd == 'f') 
     {
-      Serial.println("forward");
       forward();
       delay(100);
     }
     else if (cmd == 'r') 
     {
-      Serial.println("right");
       turnRight();
       delay(100);
     }
     else if (cmd == 'l') 
     {
-      Serial.println("left");
       turnLeft();
       delay(100);
     }
     else if (cmd == 'b') 
     {
-      Serial.println("back");
       backward();
       delay(100);
     }
     else if (cmd == 's') 
     {
-      Serial.println("stop");
       stop();
       delay(100);
     }
