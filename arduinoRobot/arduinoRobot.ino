@@ -19,13 +19,13 @@ int enc_cnt_left = 0;
 
 // pid제어기 변수
 // 오른쪽용 PID제어기 제어 이득
-double right_proportion = 1;
-double right_integral = 1;
-double right_derivative = 1;
+double right_proportion = 0.2;
+double right_integral = 0.3;
+double right_derivative = 0.15;
 // 오른쪽용 PID제어기 제어 이득
-double left_proportion = 1;
-double left_integral = 1;
-double left_derivative = 1;
+double left_proportion = 0.2;
+double left_integral = 0.3;
+double left_derivative = 0.15;
 
 // PID 오차값 전역변수로 선언
 // 오른쪽 모터용
@@ -204,6 +204,8 @@ void stop()
   digitalWrite(motorLeftDir, LOW);
   speedToTargetR(0);
   speedToTargetL(0);
+  PIDToMotorR(0);
+  PIDToMotorL(0);
 }
 
 // 셋업

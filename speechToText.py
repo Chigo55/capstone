@@ -4,9 +4,9 @@ import speech_recognition as sr
 def speechToText(deque):
     r = sr.Recognizer()
 
-    print(f'STT Start')
     while True:
         with sr.Microphone() as source:
+            print(f'STT Start')
             speech = r.listen(source)
 
         try:
