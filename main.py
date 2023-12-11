@@ -9,7 +9,7 @@ from playsound import playsound
 if __name__ == "__main__":
     try:
         # api key, model 
-        api_key = "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"
+        api_key = ""
         model = "gpt-4"
 
         # deque
